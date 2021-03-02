@@ -4,9 +4,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.16.0.127:3306/tms?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=CONVERT_TO_NULL
+    url: jdbc:mysql://47.102.202.116:3306/cloud?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
-    password: Yupei.123
+    password: 123456
     max-wait: 60000
     max-active: 100
     min-idle: 10

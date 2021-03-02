@@ -33,4 +33,9 @@ public class TestController {
         log.info(userSo.toString());
         return "success";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test";
+    }
 }
