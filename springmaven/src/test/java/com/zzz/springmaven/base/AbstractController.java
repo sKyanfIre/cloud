@@ -1,6 +1,7 @@
 package com.zzz.springmaven.base;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 

@@ -1,3 +1,8 @@
 spring:
   profiles:
     active: prod
+secure:
+  white:
+    url:
+      - /api/-${spring.profiles.active}
+      - /api/test

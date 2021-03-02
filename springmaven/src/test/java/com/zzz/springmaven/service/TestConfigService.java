@@ -12,12 +12,12 @@ import java.util.List;
 /**
  * @author zhangtianyu
  * @version 1.0
- * @ClassName TestService
+ * @ClassName TestConfigService
  * @description TODO
  * @date 2021/3/1 19:06
  **/
 @Slf4j
-public class TestService extends AbstractController {
+public class TestConfigService extends AbstractController {
 
     @Autowired
     private ITestService iTestService;

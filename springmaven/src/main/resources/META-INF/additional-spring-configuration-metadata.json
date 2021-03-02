@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "secure.white.url",
+      "type": "java.lang.String",
+      "description": "Description for secure.white.url."
+  }
+] }
