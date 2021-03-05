@@ -1,11 +1,9 @@
 package com.zzz.springmaven.controller;
 
-import com.zzz.springmaven.model.UserSo;
+import com.zzz.springmaven.model.so.UserSo;
+import com.zzz.springmaven.model.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -37,5 +35,16 @@ public class TestController {
     @GetMapping("/test")
     public String test(){
         return "test";
+    }
+
+    @GetMapping("/testString/{str}")
+    public String testString(@PathVariable("str") String str) {
+        System.out.println("获取参数" + str);
+        return str;
+    }
+
+    @PostMapping("/queryUser")
+    public UserSo testQueryUser(UserVo userVo) {
+        return new UserSo();
     }
 }

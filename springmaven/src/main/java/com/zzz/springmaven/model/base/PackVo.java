@@ -21,4 +21,8 @@ public class PackVo {
     private Integer code = 200;
     private Boolean success = true;
     private String message = "请求成功";
+    private Object data;
+    public PackVo(Object data) {
+        this.data = data;
+    }
 }

@@ -1,8 +1,7 @@
 package com.zzz.springmaven.controller;
 
 import com.zzz.springmaven.base.AbstractController;
-import com.zzz.springmaven.controller.TestController;
-import com.zzz.springmaven.model.UserSo;
+import com.zzz.springmaven.model.so.UserSo;
 import com.zzz.springmaven.service.ITestService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

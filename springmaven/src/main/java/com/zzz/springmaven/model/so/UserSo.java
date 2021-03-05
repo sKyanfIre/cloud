@@ -1,6 +1,8 @@
-package com.zzz.springmaven.model;
+package com.zzz.springmaven.model.so;
 
+import com.zzz.springmaven.model.base.BaseSo;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
@@ -14,7 +16,8 @@ import javax.validation.constraints.Size;
  * @date 2021/3/1 17:32
  **/
 @Data
-public class UserSo {
+@EqualsAndHashCode(callSuper = true)
+public class UserSo extends BaseSo {
 
     private Long id;
     @NotBlank
