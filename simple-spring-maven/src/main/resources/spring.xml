@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean name="testBean" class="com.zzz.springmaven.test.bean.TestBean">
+       <property   ref = "testBeanInit" name="testBeanInit"/>
+    </bean>
+    <bean name="testAop" class="com.zzz.springmaven.test.bean.TestAop"/>
+    <bean name="testAop2" class="com.zzz.springmaven.test.bean.TestAop2"/>
+    <bean name="testBeanInit" class="com.zzz.springmaven.test.bean.TestBeanInit"/>
+    <bean name="testBeanDestroy" class="com.zzz.springmaven.test.bean.TestBeanDestroy"/>
+    <aop:aspectj-autoproxy/>
+
+
+</beans>
