@@ -1,0 +1,7 @@
+zzz:
+  threadpool:
+    threadPoolName: zzz-thread-pool
+    corePoolSize: 8
+    maxPoolSize: 16
+    timeout: 60000
+    maxTaskSize: 1000

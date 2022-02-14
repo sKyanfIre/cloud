@@ -1,12 +1,7 @@
 /.idea/
 /com/
-/springboot-starter-simple-zzz/mvnw.cmd
-/spring/spring.iml
-/uml/uml.iml
 /**/target/**
 /**/.mvn/**
-/simple-springboot/mvnw
-/simple-springboot/mvnw.cmd
-/rabbitmq/rabbitmq.iml
-/zookeeper/zookeeper.iml
-/simple-spring-maven/simple-spring-maven.iml
+/**/mvnw
+/**/mvnw.cmd
+/**/*.iml
