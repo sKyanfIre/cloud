@@ -3,3 +3,7 @@ zzz:
   port: 8080
   username: yyy
   password: yyy
+#server:
+#  tomcat:
+#    threads:
+#      max: 100

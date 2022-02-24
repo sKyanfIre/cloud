@@ -1,6 +1,7 @@
 package com.zzz.simplespringboot.filter;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -20,6 +21,7 @@ public class MyOncePerRequestFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         System.out.println("MyOncePerRequestFilter is start ...");
+        RequestContextHolder.getRequestAttributes();
         filterChain.doFilter(request, response);
         System.out.println("MyOncePerRequestFilter is end ...");
 
