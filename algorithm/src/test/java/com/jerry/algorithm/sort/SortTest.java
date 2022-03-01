@@ -25,6 +25,11 @@ public class SortTest {
         sort(new QuickSort());
     }
 
+    @Test
+    void bubbleSortTest() {
+        sort(new BubbleSort());
+    }
+
     private void sort(Sort sort) {
         int[] array1 = Arrays.copyOf(array, array.length);
         sort.sort(array1);
