@@ -24,8 +24,12 @@ public class Reactor implements Runnable {
     private Selector selector;
     private ServerSocketChannel channel;
 
-    @SneakyThrows
     public Reactor(int port) {
+        this(port, true);
+    }
+
+    @SneakyThrows
+    public Reactor(int port, boolean sync) {
         this.port = port;
         Selector selector = Selector.open();
         this.selector = selector;
@@ -34,8 +38,7 @@ public class Reactor implements Runnable {
         channel.configureBlocking(false);
         channel.bind(new InetSocketAddress(port));
         SelectionKey selectionKey = channel.register(selector, SelectionKey.OP_ACCEPT);
-        selectionKey.attach(new Acceptor());
-
+        selectionKey.attach(sync ? new Acceptor() : new AsyncAcceptor());
     }
 
     @SneakyThrows
@@ -70,6 +73,17 @@ public class Reactor implements Runnable {
         public void run() {
             SocketChannel socketChannel = channel.accept();
             new Handler(selector, socketChannel);
+
+        }
+    }
+
+    private class AsyncAcceptor implements Runnable {
+
+        @SneakyThrows
+        @Override
+        public void run() {
+            SocketChannel socketChannel = channel.accept();
+            new AsyncHandler(selector, socketChannel);
 
         }
     }

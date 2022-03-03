@@ -51,7 +51,17 @@ public class Handler implements Runnable {
     }
 
     @SneakyThrows
-    private void read() {
+    public void read() {
+        doRead();
+        process();
+    }
+
+    public void process() {
+        log.info("req is process...");
+    }
+
+    @SneakyThrows
+    protected void doRead() {
         int length;
         StringBuilder sb = new StringBuilder();
         while ((length = socketChannel.read(byteBuffer)) != 0) {
@@ -60,7 +70,6 @@ public class Handler implements Runnable {
             byteBuffer.clear();
         }
         log.info("receive msg :{}", sb);
-
     }
 
     @SneakyThrows
