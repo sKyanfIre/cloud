@@ -28,7 +28,7 @@ public class JerryMouseClinet {
         }
         executorService.shutdown();
         long end = System.currentTimeMillis();
-        Thread.sleep(30000);
+        Thread.sleep(3000);
         log.info("cost {} ms", end - start);
 //        new PingCommand().run();
     }
