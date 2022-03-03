@@ -22,7 +22,7 @@ import java.util.concurrent.Executors;
 public class JerryMouse {
     @SneakyThrows
     public static void main(String[] args) {
-        ExecutorService requestPool = Executors.newFixedThreadPool(100);
+        ExecutorService requestPool = Executors.newFixedThreadPool(16);
         try (ServerSocket serverSocket = new ServerSocket(11111)) {
             log.info("jerry start success...");
             while (true) {

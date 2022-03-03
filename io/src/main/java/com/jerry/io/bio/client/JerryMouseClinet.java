@@ -19,12 +19,18 @@ import java.util.concurrent.Executors;
  **/
 @Slf4j
 public class JerryMouseClinet {
+    @SneakyThrows
     public static void main(String[] args) throws IOException {
-        ExecutorService executorService = Executors.newFixedThreadPool(100);
-        for (int i = 0; i < 1000; i++) {
+        long start = System.currentTimeMillis();
+        ExecutorService executorService = Executors.newFixedThreadPool(16);
+        for (int i = 0; i < 10000; i++) {
             executorService.submit(new PingCommand());
         }
         executorService.shutdown();
+        long end = System.currentTimeMillis();
+        Thread.sleep(30000);
+        log.info("cost {} ms", end - start);
+//        new PingCommand().run();
     }
 
     public static class PingCommand implements Runnable {
